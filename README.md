@@ -17,7 +17,9 @@
 
 <h2 id="sobre">Sobre</h2>
 
-<p align="left">API para controle de vacinas, com o objetivo de ficar com a vacinação sempre em dia. Desenvolvi esta API para o projeto final do curso de Nodejs do Women Can Code. Trata-se de uma API Rest em Node.js, com banco de dados PostgreSQL. Está hospedada no Heroku através do link: *https://api-vaccination-control.herokuapp.com/*
+<p align="left">API para controle de vacinas, com o objetivo de ficar com a vacinação sempre em dia. Desenvolvi esta API para o projeto final do curso de Nodejs do Women Can Code. Trata-se de uma API Rest em Node.js, com banco de dados PostgreSQL. Está hospedada no Heroku através do link: 
+
+*https://api-vaccination-control.herokuapp.com/*
 </p>
 
 <hr>
@@ -50,19 +52,11 @@
 
 <h3 id="requisitos">Pré-requisitos</h3>
 
-1. Node JS
+1. Node JS - *https://nodejs.org/en/*
 
-  *https://nodejs.org/en/*
+2. Npm ou Yarn - *https://www.npmjs.com/*
 
-
-2. Npm ou Yarn
-
-  *https://www.npmjs.com/*
-
-
-3. PostgreSQL
-
-  *https://www.postgresql.org/download/*
+3. PostgreSQL - *https://www.postgresql.org/download/*
 
 <hr>
 
@@ -110,6 +104,7 @@ Para testar a API via servidor local utilize a rota: *http://localhost:3000/*, n
 #### *POST*:
 
 - __<u>Cadastrar nova vacina</u>__ - rota: *https://api-vaccination-control.herokuapp.com/vaccines*
+
   Preencher o JSON, conforme exemplo:
 
   ```
