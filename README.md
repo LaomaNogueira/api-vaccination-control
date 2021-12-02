@@ -17,7 +17,7 @@
 
 <h2 id="sobre">Sobre</h2>
 
-<p align="left">API para controle de vacinas, com o objetivo de ficar com a vacinação sempre em dia. Desenvolvi esta API para o projeto final do curso de Nodejs do Women Can Code. Trata-se de uma API Rest em Node.js, com banco de dados PostgreSQL. Está hospedada no Heroku através do link: https://api-vaccination-control.herokuapp.com/.
+<p align="left">API para controle de vacinas, com o objetivo de ficar com a vacinação sempre em dia. Desenvolvi esta API para o projeto final do curso de Nodejs do Women Can Code. Trata-se de uma API Rest em Node.js, com banco de dados PostgreSQL. Está hospedada no Heroku através do link: *https://api-vaccination-control.herokuapp.com/*
 </p>
 
 <hr>
@@ -52,20 +52,17 @@
 
 1. Node JS
 
-  ```sh
-  https://nodejs.org/en/
-  ```
+  *https://nodejs.org/en/*
+
 
 2. Npm ou Yarn
 
-  ```sh
-  https://www.npmjs.com/
-  ```
+  *https://www.npmjs.com/*
+
 
 3. PostgreSQL
-  ```sh
-  https://www.postgresql.org/download/
-  ```
+
+  *https://www.postgresql.org/download/*
 
 <hr>
 
