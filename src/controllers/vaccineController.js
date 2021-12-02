@@ -35,19 +35,66 @@ const getVaccine = async (req, res) => {
         if (vaccine) {
             res.status(200).send(vaccine);
         } else {
-            res.status(404).send({ message: `No vaccine found with id ${id}` });
+            res.status(404).send({ message: `No vaccine found with ID ${id}` });
         }
     } catch (error) {
         res.status(500).send({ message: error.message });
     }
 };
 
+const updateVaccineRegister = async (req, res) => {
+    const { id } = req.params;
+    const { name, expected_date, vaccinated } = req.body;
+    try {
+        const result = await Vaccine.update({ name, expected_date, vaccinated }, {
+            where: { id }
+        });
+        if (result && result > 0) {
+            res.status(200).send({ message: `${result[0]} updated vaccine(s)` });
+        } else {
+            res.status(404).send({ message: `No vaccine found with ID ${id}` });
+        }
+    } catch (error) {
+        res.status(500).send({ message: error.message });
+    }
+};
+
+const isVaccinated = async (req, res) => {
+    const { id } = req.params;
+    const { vaccinated } = req.body;
+    console.log(`doctor${id}favorite${vaccinated}`)
+    try {
+        const result = await Vaccine.update({ vaccinated }, { where: { id } });
+
+        if (result && result > 0) {
+            res.status(200).send({ message: `${result[0]} vaccine(s) status updated` });
+        } else {
+            res.status(404).send({ message: `No vaccine found with ID ${id}` });
+        }
+    } catch (error) {
+        res.status(500).send({ message: error.message });
+    }
+};
+
+const deleteVaccine = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const result = await Vaccine.destroy({ where: { id } });
+        if (result) {
+            res.status(200).send({ message: `${result} vaccine(s) successfully deleted` });
+        } else {
+            res.status(404).send({ message: `No vaccine found with ID ${id}` });
+        }
+    } catch (error) {
+        res.status(500).send({ message: error.message });
+    }
+};
 
 module.exports = { 
     registerVaccine,
     getAllVaccines,
     getVaccine,
-    //updateVaccineRegister,
-    //isVaccinated,
-    //deleteVaccine
+    updateVaccineRegister,
+    isVaccinated,
+    deleteVaccine
 };
